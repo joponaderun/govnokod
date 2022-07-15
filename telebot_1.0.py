@@ -1,7 +1,7 @@
 import telebot
 from telebot import types
 
-bot = telebot.TeleBot('5400061015:AAFONAnfRMWtE0sGvcs1HAKopTbJFuBE0tw')
+bot = telebot.TeleBot('')
 
 @bot.message_handler(commands=['help'])
 def website(message):
