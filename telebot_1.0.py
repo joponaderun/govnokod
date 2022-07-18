@@ -1,9 +1,12 @@
-import os
 import telebot
 from telebot import types
 
-token = os.getenv(TOKEN)
-bot = telebot.TeleBot(token)
+TOKEN = None
+
+with open("token.txt") as f:
+    TOKEN = f.read().strip()
+    
+bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['help'])
 def website(message):
@@ -15,4 +18,3 @@ def website(message):
 
 
 bot.infinity_polling()
-
