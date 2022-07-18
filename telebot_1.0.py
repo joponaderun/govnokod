@@ -1,14 +1,18 @@
-import os
+#import os
 import telebot
 from telebot import types
+
 '''
-TOKEN = None
+
 
 with open("token.txt") as f:
     TOKEN = f.read().strip()
 '''
-os.environ[TOKEN]
-bot = telebot.TeleBot(TOKEN)
+
+#TOKEN = ''
+# os.environ[TOKEN]
+#bot = telebot.TeleBot(TOKEN)
+bot = telebot.TeleBot('5400061015:AAFONAnfRMWtE0sGvcs1HAKopTbJFuBE0tw')
 
 @bot.message_handler(commands=['help'])
 def website(message):
