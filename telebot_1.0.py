@@ -1,7 +1,9 @@
+import os
 import telebot
 from telebot import types
 
-bot = telebot.TeleBot('')
+token = os.getenv(TOKEN)
+bot = telebot.TeleBot(token)
 
 @bot.message_handler(commands=['help'])
 def website(message):
