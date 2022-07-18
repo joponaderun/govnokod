@@ -1,11 +1,13 @@
+import os
 import telebot
 from telebot import types
-
+'''
 TOKEN = None
 
 with open("token.txt") as f:
     TOKEN = f.read().strip()
-    
+'''
+os.environ[TOKEN]
 bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['help'])
